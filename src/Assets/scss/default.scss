@@ -1,0 +1,233 @@
+@import "_config.scss"; // Bootstrap corrections
+$card-padding: 10px !important;
+
+.container {
+  padding-top: 15px;
+  padding-bottom: 15px;
+}
+
+.casino-button {
+  margin: 0 auto;
+  background: #91b700;
+  color: #fff;
+  font-weight: 600;
+  font-size: 15px;
+  padding: 7px 22px;
+  border: 0;
+  border-radius: 3px;
+  border-top: 1px solid #fff;
+  width: 110px;
+  margin: 0 auto 0 50%;
+  transform: translate(-50%,0);
+  position: absolute;
+  bottom: 80px;
+  cursor: pointer;
+}
+
+.card {
+  width: auto !important;
+  border-radius: 1px !important;
+  margin-bottom: 20px;
+  border: 0 !important;
+  box-shadow: 0 0 5px silver;
+  transition: $transition;
+
+  .image-container-1 {
+    background: url("./../img/background/1.jpeg");
+    @extend %card-block;
+  }
+
+  .image-container-2 {
+    background: url("./../img/background/2.jpeg");
+    @extend %card-block;
+  }
+
+  .image-container-3 {
+    background: url("./../img/background/3.jpeg");
+    @extend %card-block;
+  }
+
+  .image-container-4 {
+    background: url("./../img/background/5.jpeg");
+    @extend %card-block;
+  }
+
+  .image-container-5 {
+    background: url("./../img/background/4.jpeg");
+    @extend %card-block;
+  }
+
+  .image-container-6 {
+    background: url("./../img/background/6.jpeg");
+    @extend %card-block;
+  }
+
+  .image-container-7 {
+    background: url("./../img/background/7.jpeg");
+    @extend %card-block;
+  }
+
+  .card-body {
+    padding: 0 5px !important;
+    z-index: 1;
+
+    &::after {
+      content: '';
+      position: absolute;
+      bottom: 39px;
+      left: calc(50% - 20px);
+      width: 0;
+      height: 0;
+      border-left: 20px solid transparent;
+      border-right: 20px solid transparent;
+      border-bottom: 20px solid #fff;
+    }
+
+    .card-title {
+      display: inline-block;
+      margin-top: 10px;
+    }
+
+    .info-block {
+      float: right;
+      border-left: 1px solid rgba(0,0,0,.125);
+    }
+  }
+}
+
+body > section > div > div > div:nth-child(1) > div > div.card-body {
+  &::after {
+    content: '';
+    position: absolute;
+    bottom: 39px;
+    left: 45%;
+    width: 0;
+    height: 0;
+    border-left: 20px solid transparent;
+    border-right: 20px solid transparent;
+    border-bottom: 20px solid transparent;
+  }
+}
+
+.row {
+  margin-right: -5px !important;
+  margin-left: -5px !important;
+}
+
+body {
+  background: url("./../img/background/brushed.png");
+  overflow-x: hidden;
+}
+
+.svg {
+  width: 40px;
+  height: 40px;
+}
+
+.promo-svg {
+  width: 30px;
+  height: 30px;
+}
+
+.promo-svg-small {
+  margin-top: 5px;
+}
+
+.section-block {
+  max-width: 1280px;
+  margin: 20px auto;
+}
+
+.ribbon-svg {
+  width: 100%;
+  max-width: 300px;
+  margin: 0 auto 0 50%;
+  transform: translate(-50%,0);
+  bottom: 100px;
+  position: relative;
+  height: 300px;
+}
+
+.ribbon-content {
+  width: 100%;
+  max-width: 300px;
+  margin: 0 auto 0 50%;
+  transform: translate(-50%,0);
+  bottom: 280px;
+  position: relative;
+  text-align: center;
+  height: 300px;
+  font-weight: 700;
+}
+
+.roulette-title {
+  font-size: 2rem;
+  color: $white;
+  text-align: center;
+  position: relative;
+  top: 14vh;
+}
+
+.h5,
+h5 {
+  font-size: 1rem !important;
+}
+@media (min-width:991px) and (max-width:1199px) {
+  .ribbon-svg {
+    top: -100px;
+  }
+}
+@media (max-width:991px) {
+  .odd {
+    padding-right: $card-padding;
+  }
+
+  .even {
+    padding-left: $card-padding;
+  }
+}
+@media (max-width:578px) {
+  .image-container-1,
+  .image-container-2,
+  .image-container-3,
+  .image-container-4,
+  .image-container-5,
+  .image-container-6,
+  .image-container-7 {
+    height: 140px !important;
+    transition: $transition;
+  }
+
+  .roulette-title {
+    top: 7vh;
+  }
+
+  .card-body {
+    &::after {
+      left: calc(50% - 10px) !important;
+      border-left: 10px solid transparent !important;
+      border-right: 10px solid transparent !important;
+      border-bottom: 10px solid #fff !important;
+    }
+  }
+}
+@media (max-width:492px) {
+  .ribbon-content-first {
+    bottom: 270px;
+
+    .svg {
+      width: 20px;
+      height: 20px;
+    }
+
+    span {
+      font-size: 10px;
+    }
+  }
+}
+@media (max-width:330px) {
+  .new-svg,
+  .slot-svg {
+    width: 30px;
+  }
+}
